@@ -1,5 +1,7 @@
+import Login from "./assets/components/pages/Login";
+
 const App = () => {
-  return <div>Hello Fam!</div>;
+  return <Login />;
 };
 
 export default App;
