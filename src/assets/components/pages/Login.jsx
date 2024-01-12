@@ -1,43 +1,40 @@
-const Login = () => {
+const Login = ({ updateIsNewUser }) => {
+  const signupHandler = () => {
+    updateIsNewUser(true);
+  };
+
   return (
     <>
-      <div className="bg-red-300 h-screen flex flex-col lg:flex-row">
-        <section className="bg-red-400 hidden lg:grid lg:w-1/2 place-content-center">
-          Hero section
-        </section>
-        <section className="bg-blue-400 h-full lg:w-1/2 grid place-content-center">
-          <h3 className="text-center mb-5">Login</h3>
+      <section className="bg-[#242424] text-white h-full lg:w-1/2 grid place-content-center">
+        <h3 className="text-center mb-5">Login</h3>
 
-          <form className="">
-            <ul className="flex flex-col gap-5">
-              <li>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" />
-              </li>
-              <li>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" />
-              </li>
-              <li>
-                <label htmlFor="pass">Password:</label>
-                <input type="password" id="pass" />
-              </li>
-
-              <li>
-                <label htmlFor="pass2">Confirm Password:</label>
-                <input type="password" id="pass2" />
-              </li>
-            </ul>
-          </form>
-        </section>
+        <form className="flex flex-col px-3">
+          <ul className="flex flex-col gap-5">
+            <li>
+              <label htmlFor="email-L">Email:</label>
+              <input type="email" id="email-L" />
+            </li>
+            <li>
+              <label htmlFor="pass-L">Password:</label>
+              <input type="password" id="pass-L" />
+            </li>
+          </ul>
+          <button className="bg-blue-700 mt-5 px-3 py-1 rounded">Log In</button>
+        </form>
 
         <div>
-          <p>
+          <p className="text-center mt-5">
             Don&apos;t have an account?{" "}
-            <a className="underline italic text-blue-900">Sign up</a>
+            <a
+              href="#"
+              className="underline italic text-blue-500"
+              onClick={signupHandler}
+            >
+              Sign up
+            </a>
           </p>
         </div>
-      </div>
+      </section>
     </>
   );
 };
