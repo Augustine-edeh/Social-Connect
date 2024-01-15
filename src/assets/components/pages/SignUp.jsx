@@ -11,7 +11,7 @@ const SignUp = ({ updateIsNewUser }) => {
 
       <h3 className="text-center mb-5 font-bold text-2xl">Sign Up</h3>
 
-      <form className="flex flex-col gap-8 my-10">
+      <form className="flex flex-col gap-8 mt-10">
         <input
           type="text"
           className="rounded-3xl pl-5 pr-16 py-4 bg-[#2E2E2E] md:w-[30rem]"
@@ -37,20 +37,18 @@ const SignUp = ({ updateIsNewUser }) => {
         </button>
       </form>
 
-      <div>
-        <p className="text-center mt-5">
-          Have an account?{" "}
-          <a
-            href="#"
-            className="underline italic text-blue-500"
-            onClick={signupHandler}
-          >
-            Log In
-          </a>
-        </p>
-      </div>
+      <p className="text-center mt-5">
+        Have an account?{" "}
+        <a
+          href="#"
+          className="underline italic text-blue-500"
+          onClick={signupHandler}
+        >
+          Log In
+        </a>
+      </p>
 
-      <div className="flex gap-10 my-6">
+      <div className="flex gap-10 mt-6 mb-7">
         <hr className="w-1/2" />
         <hr className="w-1/2" />
       </div>
