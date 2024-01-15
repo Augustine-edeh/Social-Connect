@@ -19,8 +19,9 @@ const App = () => {
           people together.
         </p>
         <p className="text-center">
-          Stay connected with friends and followers, share your moments in one
-          place.
+          Stay connected with friends and followers, share your
+          <br />
+          moments in one place.
         </p>
       </section>
       {!isNewUser ? (

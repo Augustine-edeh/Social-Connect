@@ -3,30 +3,38 @@ const SignUp = ({ updateIsNewUser }) => {
     updateIsNewUser(false);
   };
   return (
-    <section className="bg-[#242424] text-white h-full lg:w-1/2 grid place-content-center">
-      <h3 className="text-center mb-5">Sign Up</h3>
+    <section className="bg-[#161616] text-white h-full grid lg:w-1/2 place-content-center">
+      <div className="text-right w-fit place-content-center fixed top-5 right-5 lg:top-10 lg:right-10">
+        <p className="font-extrabold text-2xl lg:text-3xl">SocialCo</p>
+        <p className="text-xs lg:text-base">Real-time Chat</p>
+      </div>
 
-      <form className="flex flex-col px-3">
-        <ul className="flex flex-col gap-5">
-          <li>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" />
-          </li>
-          <li>
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" />
-          </li>
-          <li>
-            <label htmlFor="pass">Password:</label>
-            <input type="password" id="pass" />
-          </li>
+      <h3 className="text-center mb-5 font-bold text-2xl">Sign Up</h3>
 
-          <li>
-            <label htmlFor="pass2">Confirm Password:</label>
-            <input type="password" id="pass2" />
-          </li>
-        </ul>
-        <button className="bg-blue-700 mt-3 px-3 py-1 rounded">Sign Up</button>
+      <form className="flex flex-col gap-8 my-10">
+        <input
+          type="text"
+          className="rounded-3xl pl-5 pr-16 py-4 bg-[#2E2E2E] md:w-[30rem]"
+          placeholder="Enter full Name"
+        />
+        <input
+          type="email"
+          className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
+          placeholder="Enter your email address"
+        />
+        <input
+          type="password"
+          className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
+          placeholder="Enter password"
+        />
+        <input
+          type="password"
+          className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
+          placeholder="Confirm password"
+        />
+        <button className="bg-white text-black px-3 py-3 rounded-3xl font-extrabold text-lg mt-3">
+          Sign Up
+        </button>
       </form>
 
       <div>
@@ -42,13 +50,11 @@ const SignUp = ({ updateIsNewUser }) => {
         </p>
       </div>
 
-      <div className="flex place-content-center mt-14 mb-8">
-        <p className="w-1/2 h-1 bg-white my-auto" />
-        <p className="mx-6">OR</p>
-        <p className="w-1/2 h-1 bg-white my-auto" />
+      <div className="flex gap-10 my-6">
+        <hr className="w-1/2" />
+        <hr className="w-1/2" />
       </div>
-
-      <button className="bg-blue-700 rounded px-3 py-2 mt-5">
+      <button className="bg-white text-black p-3 rounded-3xl font-extrabold text-lg">
         Sign up with Google
       </button>
     </section>
