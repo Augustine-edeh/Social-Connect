@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Login from "../Login";
 import SignUp from "../SignUp";
 const Home = () => {
@@ -23,11 +24,18 @@ const Home = () => {
           moments in one place.
         </p>
       </section>
-      {!isNewUser ? (
+      {/* {!isNewUser ? (
         <Login updateIsNewUser={updateIsNewUser} />
       ) : (
         <SignUp updateIsNewUser={updateIsNewUser} />
-      )}
+      )} */}
+      {/* <>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </> */}
     </div>
   );
 };

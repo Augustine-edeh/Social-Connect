@@ -1,10 +1,26 @@
+import { Link } from "react-router-dom";
+
 const Login = ({ updateIsNewUser }) => {
   const signupHandler = () => {
     updateIsNewUser(true);
   };
 
   return (
-    <>
+    <div className="h-screen flex flex-col lg:flex-row">
+      <section className="bg-[#82182C] text-white hidden lg:grid lg:w-1/2 place-content-center">
+        <img src="" alt="vector-img" />
+
+        <p className="text-center font-extrabold text-3xl">
+          SocialConnect brings
+          <br />
+          people together.
+        </p>
+        <p className="text-center">
+          Stay connected with friends and followers, share your
+          <br />
+          moments in one place.
+        </p>
+      </section>
       <section className="bg-[#161616] text-white h-full grid lg:w-1/2 place-content-center">
         <div className="text-right w-fit place-content-center fixed top-5 right-5 lg:top-10 lg:right-10">
           <p className="font-extrabold text-2xl lg:text-3xl">SocialCo</p>
@@ -40,17 +56,18 @@ const Login = ({ updateIsNewUser }) => {
 
           <p className="text-center mt-5">
             Don&apos;t have an account yet?{" "}
-            <a
-              href="#"
+            <Link
+              to="/signup"
+              // href="#"
               className="underline italic text-blue-500"
               onClick={signupHandler}
             >
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 export default Login;
