@@ -29,10 +29,7 @@ const SignupForm = () => {
           Sign Up
         </button>
       </form>
-      {/* <div className="flex gap-10 mt-6 mb-7">
-        <hr className="w-1/2" />
-        <hr className="w-1/2" />
-      </div> */}
+
       <p className="my-5 text-center">or sign up with</p>
       <div className="flex flex-col md:flex-row gap-5">
         <button className="bg-white text-black p-3 w-full md:w-1/2 rounded-2xl font-extrabold text-lg">
