@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigateTo = useNavigate();
+
   return (
     <section className="bg-[#161616] text-white h-full grid lg:w-1/2 place-content-center">
       <h3 className="text-center text-2xl mb-5 font-extrabold">Log in</h3>
@@ -19,7 +21,10 @@ const LoginForm = () => {
           className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
           placeholder="Enter your password"
         />
-        <button className="bg-white text-black p-3 rounded-3xl font-extrabold text-lg">
+        <button
+          className="bg-white text-black p-3 rounded-3xl font-extrabold text-lg"
+          onClick={() => navigateTo("/profile")}
+        >
           Log In
         </button>
       </form>
