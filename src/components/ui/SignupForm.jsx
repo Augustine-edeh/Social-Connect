@@ -8,26 +8,35 @@ const SignupForm = () => {
         <input
           type="text"
           className="rounded-3xl pl-5 pr-16 py-4 bg-[#2E2E2E] md:w-[30rem]"
-          placeholder="Enter full Name"
+          placeholder="Your full name"
         />
         <input
           type="email"
           className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
-          placeholder="Enter your email address"
+          placeholder="Create a Username"
+        />
+        <input
+          type="email"
+          className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
+          placeholder="Email"
         />
         <input
           type="password"
           className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
-          placeholder="Enter password"
+          placeholder="Password"
         />
         <input
           type="password"
           className="rounded-3xl pl-5 py-4 bg-[#2E2E2E] md:w-[30rem]"
-          placeholder="Confirm password"
+          placeholder="Confirm Password"
         />
         <button className="bg-white text-black px-3 py-3 rounded-3xl font-extrabold text-lg mt-3">
           Sign Up
         </button>
+        <div className="flex gap-5">
+          <input type="checkbox" className="w-10 rounded-xl bg-red-400" />
+          <p>By signing up, you agree to our Terms and Privact Policy</p>
+        </div>
       </form>
 
       <p className="my-5 text-center">or sign up with</p>
