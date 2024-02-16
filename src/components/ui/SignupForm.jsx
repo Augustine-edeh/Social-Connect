@@ -4,7 +4,6 @@ const SignupForm = () => {
   return (
     <section className="bg-[#161616] text-white h-full grid lg:w-1/2 place-content-center">
       <h3 className="text-center mb-5 font-bold text-2xl">Sign Up</h3>
-
       <form className="flex flex-col gap-8 mt-10">
         <input
           type="text"
@@ -30,21 +29,26 @@ const SignupForm = () => {
           Sign Up
         </button>
       </form>
+      {/* <div className="flex gap-10 mt-6 mb-7">
+        <hr className="w-1/2" />
+        <hr className="w-1/2" />
+      </div> */}
+      <p className="my-5 text-center">or sign up with</p>
+      <div className="flex flex-col md:flex-row gap-5">
+        <button className="bg-white text-black p-3 w-full md:w-1/2 rounded-2xl font-extrabold text-lg">
+          Google
+        </button>
 
+        <button className="bg-white text-black p-3 w-full md:w-1/2 rounded-2xl font-extrabold text-lg">
+          Email
+        </button>
+      </div>
       <p className="text-center mt-5">
-        Have an account?{" "}
+        Already have an account?{" "}
         <Link to="/login" className="underline italic text-blue-500">
           Log In
         </Link>
       </p>
-
-      <div className="flex gap-10 mt-6 mb-7">
-        <hr className="w-1/2" />
-        <hr className="w-1/2" />
-      </div>
-      <button className="bg-white text-black p-3 rounded-3xl font-extrabold text-lg">
-        Sign up with Google
-      </button>
     </section>
   );
 };
