@@ -1,9 +1,5 @@
 about deploying, behind scenes, how to deploy right -
 debugging in vscode, chrome -
-rendering in the html file and the 2 redering methods...
 hooks - 
 add documentation
-
-add follow button to notifications page - done
-    /* find a way to make the name bold in notifications, gpt */
 find a way to avoid repeating styles in classeslike if padding right and left are same thing
