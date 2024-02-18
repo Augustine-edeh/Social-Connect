@@ -7,6 +7,7 @@ import Notifications from './components/pages/Notifications'
 import LandingPage from './components/pages/LandingPage'
 import HomePage from './components/pages/HomePage'
  */
+
 const App = () => {
     //Notification elements
   const objects = {
