@@ -1,4 +1,4 @@
-import ImgHolder from "../../images/ImgHolder.png";
+import ImgHolder from "../../assets/images/ImgHolder.png";
 import Footer from './Footer.jsx'
 
 const LandingPage = () => {

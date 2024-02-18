@@ -2,12 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Profile from "./components/pages/Profile";
-import Settings from "./components/pages/Settings"
+/* import Settings from "./components/pages/Settings"
 import Notifications from './components/pages/Notifications'
 import LandingPage from './components/pages/LandingPage'
 import HomePage from './components/pages/HomePage'
-import Profile from "./components/pages/Profile";
-
+ */
 const App = () => {
     //Notification elements
   const objects = {
@@ -43,7 +42,6 @@ const App = () => {
     optionsIcon: '...', /* added for ui */
   }
 
-  const App = () => {
     return (
       <Routes>
         <Route index element={<Login />} />
@@ -51,7 +49,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<p>Page Not Found (Error 404!)</p>} />
-        <HomePage
+        {/* <HomePage
           homePageElements={homePageElements}
         />
         <LandingPage
@@ -59,10 +57,9 @@ const App = () => {
         <Notifications 
           notificationsElements={notificationsElements}
         />
-        <Settings />
+        <Settings /> */}
       </Routes>
     )
-  }
 }
 
 export default App
