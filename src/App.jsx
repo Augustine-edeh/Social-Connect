@@ -2,11 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Profile from "./components/pages/Profile";
-/* import Settings from "./components/pages/Settings"
+import Settings from "./components/pages/Settings"
 import Notifications from './components/pages/Notifications'
 import LandingPage from './components/pages/LandingPage'
 import HomePage from './components/pages/HomePage'
- */
 
 const App = () => {
     //Notification elements
@@ -38,29 +37,24 @@ const App = () => {
     userName: `${objects.userName1}`,
     /* if any then display and if they tag, display taggedd user*/
     postText: 'Yesterday I created this artwork to express my gratitude towards the amazing people on this platform.',
-    commentCount: `20 comments`,
+    commentCount: `20 comments`, /* if condtion for count when user likes or comment */
     likeCount: `You and 300 others`,
     optionsIcon: '...', /* added for ui */
   }
 
-    return (
-      <Routes>
-        <Route index element={<Login />} />
-        <Route path="login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="*" element={<p>Page Not Found (Error 404!)</p>} />
-        {/* <HomePage
-          homePageElements={homePageElements}
-        />
-        <LandingPage
-        />
-        <Notifications 
-          notificationsElements={notificationsElements}
-        />
-        <Settings /> */}
-      </Routes>
-    )
+  return (
+    <Routes>
+      <Route index element={<Login />} />
+      <Route path="login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/HomePage" element={<HomePage homePageElements={homePageElements}/>} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/LandingPage" element={<LandingPage />} />
+      <Route path="/Notifiations" element={<Notifications notificationsElements={notificationsElements}/>} />
+      <Route path="/Settings" element={<Settings />} /> 
+      <Route path="*" element={<p>Page Not Found (Error 404!)</p>} />
+    </Routes>
+  )
 }
 
 export default App
