@@ -37,8 +37,8 @@ const App = () => {
     userName: `${objects.userName1}`,
     /* if any then display and if they tag, display taggedd user*/
     postText: 'Yesterday I created this artwork to express my gratitude towards the amazing people on this platform.',
-    commentCount: `20 comments`, /* if condtion for count when user likes or comment */
-    likeCount: `You and 300 others`,
+    commentCount: `20`, /* if condtion for icon when user likes or comment */
+    likeCount: `328`,
     optionsIcon: '...', /* added for ui */
   }
 
