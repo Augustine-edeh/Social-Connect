@@ -63,53 +63,6 @@ const HomePage = ({ homePageElements }) => {
           </div>  
         </div>
 
-        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px] ">
-          <div className="flex flex-row justify-content mb-[8px] ">
-            <img className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer "
-              onClick={() => navigateTo("/profile")}
-              src={ImgHolder} 
-              alt='Profile Picture'/>
-              <p className="cursor-pointer "
-                onClick={() => navigateTo("/profile")}>
-                <b>{userName}</b>
-              </p>
-              <p className='order-last cursor-pointer '>{optionsIcon}</p>
-          </div>         
-          <p className='my-[8px] '>{postText}</p>
-          <div className='flex flex-row mt-[15px] '>
-            <ChatBubbleOvalLeftIcon className="h-6 w-6 cursor-pointer " />
-            <p>{commentCount}</p>
-            <HeartIcon className="h-6 w-6 cursor-pointer text-purple-700 fill-current " />
-            <p className=' '>{likeCount}</p>{/* use state to change icon when clicked? */}
-            <ShareIcon className="h-6 w-6 cursor-pointer " />
-            <BookmarkIcon className="h-6 w-6 cursor-pointer " />
-          </div>  
-        </div>
-
-        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px] ">
-          <div className="flex flex-row justify-content mb-[8px] ">
-            <img className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer "
-              onClick={() => navigateTo("/profile")}
-              src={ImgHolder} 
-              alt='Profile Picture'/>
-              <p className="cursor-pointer "
-                onClick={() => navigateTo("/profile")}>
-                <b>{userName}</b>
-              </p>
-              <p className='order-last cursor-pointer '>{optionsIcon}</p>
-          </div>
-          {/* img should be original size as posted, so no fixed height  */}
-          <p className='my-[8px] '>{postText}</p>
-          <div className='flex flex-row mt-[15px] '>
-            <ChatBubbleOvalLeftIcon className="h-6 w-6 cursor-pointer " />
-            <p>{commentCount}</p>
-            <HeartIcon className="h-6 w-6 cursor-pointer " />
-            <p className=' '>{likeCount}</p>{/* use state to change icon when clicked? */}
-            <ShareIcon className="h-6 w-6 cursor-pointer " />
-            <BookmarkIcon className="h-6 w-6 cursor-pointer " />
-          </div>  
-        </div>
-        
       </div>
     </div>
   )
