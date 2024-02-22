@@ -26,11 +26,14 @@ const HomePage = ({ homePageElements }) => {
       {/* Top bar */}
       <div className="flex flex-row shadow-md p-[15px] text-white bg-purple-700">
         {/* Greeting */}
-        <h2 onClick={() => navigateTo("/Settings")}><b>{greeting}</b></h2>
+        <h2 onClick={() => navigateTo("/Settings")}>
+         <b>{greeting}</b>
+        </h2>
         {/* Application name */}
         <h2><b>{appName}</b></h2>
         {/* Notification bell icon */}
-        <BellIcon className="h-6 w-6 cursor-pointer" onClick={() => navigateTo("/Notifications")} />
+        <BellIcon className="h-6 w-6 cursor-pointer"
+         onClick={() => navigateTo("/Notifications")} />
       </div>
      
       {/* Main content */}
@@ -47,7 +50,10 @@ const HomePage = ({ homePageElements }) => {
               alt="Profile Picture"
             />
             {/* User name */}
-            <p className="cursor-pointer" onClick={() => navigateTo("/profile")}><b>{userName}</b></p>
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
             {/* Additional options icon */}
             <p className="order-last cursor-pointer">{optionsIcon}</p>
           </div>
