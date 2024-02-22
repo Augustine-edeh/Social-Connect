@@ -1,5 +1,5 @@
 import Footer from './Footer.jsx'
-import ImgHolder from "../../assets/images/ImgHolder.png";
+import ImgHolder from "../../assets/images/lady.png";
 import { /* Link, */ useNavigate } from "react-router-dom"
 
 const Settings = () => {

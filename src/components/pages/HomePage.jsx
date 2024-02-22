@@ -1,4 +1,6 @@
-import ImgHolder from "../../assets/images/ImgHolder.png"
+import ImgHolder from "../../assets/images/lady.png"
+import couple from "../../assets/images/couple.png"
+import artwork from "../../assets/images/artwork.png"
 import { /* Link, */ useNavigate } from "react-router-dom"
 import { BellIcon } from '@heroicons/react/24/outline'
 import { ChatBubbleOvalLeftIcon } from '@heroicons/react/24/outline'
@@ -61,7 +63,7 @@ const HomePage = ({ homePageElements }) => {
             <p className="order-last cursor-pointer">{optionsIcon}</p>
           </div>
           {/* Post image. img should be original size as posted, so no fixed height  */}
-          <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
+          <img className="h-4/5 w-full rounded-2xl" src={artwork} alt="Profile Picture" />
           {/* Post text */}
          <p className="my-[8px]">{postText1}</p>
           {/* Post actions */}
@@ -186,7 +188,7 @@ const HomePage = ({ homePageElements }) => {
             <p className="order-last cursor-pointer">{optionsIcon}</p>
           </div>
           {/* Post image. img should be original size as posted, so no fixed height  */}
-          <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
+          <img className="h-4/5 w-full rounded-2xl" src={artwork} alt="Profile Picture" />
           {/* Post text */}
          <p className="my-[8px]">{postText2}</p>
           {/* Post actions */}
@@ -270,7 +272,7 @@ const HomePage = ({ homePageElements }) => {
             <p className="order-last cursor-pointer">{optionsIcon}</p>
           </div>
           {/* Post image. img should be original size as posted, so no fixed height  */}
-          <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
+          <img className="h-4/5 w-full rounded-2xl" src={couple} alt="Profile Picture" />
           {/* Post text */}
          <p className="my-[8px]">{postText3}</p>
           {/* Post actions */}

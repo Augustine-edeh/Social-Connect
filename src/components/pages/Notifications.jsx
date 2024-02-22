@@ -1,5 +1,5 @@
 import Footer from './Footer.jsx'
-import ImgHolder from "../../assets/images//ImgHolder.png";
+import ImgHolder from "../../assets/images//lady.png";
 
 const Notifications = ({ notificationsElements }) => {
   const {
