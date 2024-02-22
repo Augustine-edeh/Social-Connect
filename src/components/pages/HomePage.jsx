@@ -23,7 +23,7 @@ const HomePage = ({ homePageElements }) => {
   return (
     <div>
       <div className="flex flex-row shadow-md p-[15px] text-white bg-purple-700">
-          <h2 onClick={() => navigateTo("/Settings")}
+          <h2 onClick={() => navigateTo("/Settings")}>
            <b>{greeting}</b></h2>
           <h2><b>{appName}</b></h2>
           <BellIcon className="h-6 w-6 cursor-pointer "
