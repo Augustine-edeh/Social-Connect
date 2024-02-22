@@ -38,6 +38,7 @@ const HomePage = ({ homePageElements }) => {
      
       {/* Main content */}
       <div className="m-[7px] text-sm">{/* homepage body div, change font for pc */}
+       
         {/* Post container */}
         <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
           {/* Post header */}
@@ -60,7 +61,257 @@ const HomePage = ({ homePageElements }) => {
           {/* Post image. img should be original size as posted, so no fixed height  */}
           <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
           {/* Post text */}
-         <p className="my-[8px]">{postText}</p>
+         <p className="my-[8px]">{postText1}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post text */}
+         <p className="my-[8px]">{postText2}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post text */}
+         <p className="my-[8px]">{postText3}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post image. img should be original size as posted, so no fixed height  */}
+          <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
+          {/* Post text */}
+         <p className="my-[8px]">{postText2}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post text */}
+         <p className="my-[8px]">{postText1}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post image. img should be original size as posted, so no fixed height  */}
+          <img className="h-4/5 w-full rounded-2xl" src={ImgHolder} alt="Profile Picture" />
+          {/* Post text */}
+         <p className="my-[8px]">{postText3}</p>
+          {/* Post actions */}
+          <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
+            {/* Comment icon and count */}
+            <div className="flex gap-x-0.5">
+              <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer" />
+              <p>{commentCount}</p>
+            </div>
+            {/* Like icon and count */}
+            <div className="flex gap-x-0.5">
+              <HeartIcon 
+               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+              <p>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
+            {/* Share icon */}
+            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            {/* Bookmark icon */}
+            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+          </div>
+         </div>
+
+       {/* Post container */}
+        <div className="shadow-md rounded-[25px] px-[14px] py-[14px] my-[8px]">
+          {/* Post header */}
+          <div className="flex flex-row justify-content mb-[8px]">
+            {/* User profile picture */}
+            <img
+              className="h-[30px] w-[30px] mr-[15px] rounded-full cursor-pointer"
+              onClick={() => navigateTo("/profile")}
+              src={ImgHolder}
+              alt="Profile Picture"
+            />
+            {/* User name */}
+            <p className="cursor-pointer" 
+             onClick={() => navigateTo("/profile")}>
+             <b>{userName}</b>
+            </p>
+            {/* Additional options icon */}
+            <p className="order-last cursor-pointer">{optionsIcon}</p>
+          </div>
+          {/* Post text */}
+         <p className="my-[8px]">{postText2}</p>
           {/* Post actions */}
           <div className="flex flex-row justify-between mt-[15px] mx-[40px]">
             {/* Comment icon and count */}
