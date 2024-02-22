@@ -1,7 +1,10 @@
 import Footer from './Footer.jsx'
 import ImgHolder from "../../assets/images/ImgHolder.png";
+import { /* Link, */ useNavigate } from "react-router-dom"
 
 const Settings = () => {
+     const navigateTo = useNavigate();
+ 
       return (
         <div>
             <h1 className="pl-[10px]" /* settingsHeader */>Settings</h1>
@@ -10,7 +13,8 @@ const Settings = () => {
               src={ImgHolder} 
               alt='Profile Picture' /* id="profilePic" *//>
               <p className="m-0"><b>Change Profile Picture</b></p>
-              <p className="m-0">Edit Profile Information</p>
+              <p onClick={() => navigateTo("/profile")}
+                 className="m-0">Edit Profile Information</p>
               {/* <a href="#"
                   onClick={}> arrow
                   </a>
