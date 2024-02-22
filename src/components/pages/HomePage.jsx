@@ -115,11 +115,11 @@ const HomePage = ({ homePageElements }) => {
             {/* Like icon and count */}
             <div className="flex gap-x-0.5">
               <HeartIcon 
-               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+               className="h-5 w-6 cursor-pointer " />
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
-            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            <ShareIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current " />
             {/* Bookmark icon */}
             <BookmarkIcon className="h-5 w-6 cursor-pointer" />
           </div>
@@ -199,13 +199,13 @@ const HomePage = ({ homePageElements }) => {
             {/* Like icon and count */}
             <div className="flex gap-x-0.5">
               <HeartIcon 
-               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+               className="h-5 w-6 cursor-pointer " />
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
             <ShareIcon className="h-5 w-6 cursor-pointer" />
             {/* Bookmark icon */}
-            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purle-700 fill-current " />
           </div>
          </div>
 
@@ -287,7 +287,7 @@ const HomePage = ({ homePageElements }) => {
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
-            <ShareIcon className="h-5 w-6 cursor-pointer" />
+            <ShareIcon className="h-5 w-6 cursor-pointer text-purle-700 fill-current " />
             {/* Bookmark icon */}
             <BookmarkIcon className="h-5 w-6 cursor-pointer" />
           </div>
@@ -324,7 +324,7 @@ const HomePage = ({ homePageElements }) => {
             {/* Like icon and count */}
             <div className="flex gap-x-0.5">
               <HeartIcon 
-               className="h-5 w-6 cursor-pointer text-purple-700 fill-current" />
+               className="h-5 w-6 cursor-pointer " />
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
