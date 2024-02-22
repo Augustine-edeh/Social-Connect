@@ -50,7 +50,7 @@ const App = () => {
       <Route path="/HomePage" element={<HomePage homePageElements={homePageElements}/>} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/LandingPage" element={<LandingPage />} />
-      <Route path="/Notifiations" element={<Notifications notificationsElements={notificationsElements}/>} />
+      <Route path="/Notifications" element={<Notifications notificationsElements={notificationsElements}/>} />
       <Route path="/Settings" element={<Settings />} /> 
       <Route path="*" element={<p>Page Not Found (Error 404!)</p>} />
     </Routes>
