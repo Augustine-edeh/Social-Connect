@@ -11,10 +11,9 @@ const Settings = () => {
             <div className="shadow-md rounded-[21px] m-[10px] pl-[15px] py-[13px] " /* id="set1" */>
               <img className="h-[50px] w-[50px] mr-[15px] rounded-full float-left"
               src={ImgHolder} 
-              alt='Profile Picture' /* id="profilePic" *//>
-              <p className="m-0"><b>Change Profile Picture</b></p>
+              alt='Profile Picture' /* id="profilePic" */
               <p onClick={() => navigateTo("/profile")}
-                 className="m-0">Edit Profile Information</p>
+                 className="m-0 cursor-pointer">Edit Profile Information</p>
               {/* <a href="#"
                   onClick={}> arrow
                   </a>
