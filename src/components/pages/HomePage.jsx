@@ -48,13 +48,15 @@ const HomePage = ({ homePageElements }) => {
             src={ImgHolder} 
             alt='Profile Picture'/> 
           <p className='my-[8px] '>{postText}</p>
-          <div className='flex flex-row justify-between mt-[15px] mx-[20px]'>
-            <div className='flex flex-row '>
+          <div className='flex flex-row justify-between mt-[15px] mx-[30px]'>
+            <div className='flex '>
               <ChatBubbleOvalLeftIcon className="h-5 w-5 cursor-pointer " />
               <p>{commentCount}</p>
             </div>
-            <HeartIcon className="h-6 w-6 cursor-pointer text-purple-700 fill-current " />
-            <p className=' '>{likeCount}</p>{/* use state to change icon when clicked? */}
+            <div className='flex justify-evenly bg-blue-700 '>
+              <HeartIcon className="h-6 w-6 cursor-pointer text-purple-700 fill-current " />
+              <p className=' '>{likeCount}</p>{/* use state to change icon when clicked? */}
+            </div>
             <ShareIcon className="h-6 w-6 cursor-pointer " />
             <BookmarkIcon className="h-6 w-6 cursor-pointer " />
           </div>  
