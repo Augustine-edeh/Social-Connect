@@ -36,7 +36,9 @@ const App = () => {
     appName: 'SocialConnect',
     userName: `${objects.userName1}`,
     /* if any then display and if they tag, display taggedd user*/
-    postText: 'Yesterday I created this artwork to express my gratitude towards the amazing people on this platform.',
+    postText1: 'Yesterday I created this artwork to express my gratitude towards the amazing people on this platform.',
+    postText2: "Exploring new hiking trails this weekend! 🏞️ Can't wait to immerse myself in nature. Who else loves a good outdoor adventure? #NatureLovers #HikingLife",
+    postText3: "Navigating the beautiful journey of marriage with my best friend and partner-in-crime! 💑 From silly arguments to heartfelt conversations, every moment strengthens our bond. #InfluenceWithLove",
     commentCount: `20`, /* if condtion for icon when user likes or comment */
     likeCount: `328`,
     optionsIcon: '...', /* added for ui */
