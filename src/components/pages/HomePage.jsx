@@ -119,9 +119,9 @@ const HomePage = ({ homePageElements }) => {
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
-            <ShareIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current " />
+            <ShareIcon className="h-5 w-6 cursor-pointer " />
             {/* Bookmark icon */}
-            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current  " />
           </div>
          </div>
 
@@ -162,7 +162,7 @@ const HomePage = ({ homePageElements }) => {
             {/* Share icon */}
             <ShareIcon className="h-5 w-6 cursor-pointer" />
             {/* Bookmark icon */}
-            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current " />
           </div>
          </div>
 
@@ -205,7 +205,7 @@ const HomePage = ({ homePageElements }) => {
             {/* Share icon */}
             <ShareIcon className="h-5 w-6 cursor-pointer" />
             {/* Bookmark icon */}
-            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purle-700 fill-current " />
+            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current " />
           </div>
          </div>
 
@@ -287,9 +287,9 @@ const HomePage = ({ homePageElements }) => {
               <p>{likeCount}</p>{/* use state to change icon when clicked? */}
             </div>
             {/* Share icon */}
-            <ShareIcon className="h-5 w-6 cursor-pointer text-purle-700 fill-current " />
+            <ShareIcon className="h-5 w-6 cursor-pointer " />
             {/* Bookmark icon */}
-            <BookmarkIcon className="h-5 w-6 cursor-pointer" />
+            <BookmarkIcon className="h-5 w-6 cursor-pointer text-purple-700 fill-current " />
           </div>
          </div>
 
