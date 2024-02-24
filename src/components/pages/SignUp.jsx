@@ -1,6 +1,6 @@
-import Hero from "./ui/Hero";
-import Emblem from "./ui/Emblem";
-import SignupForm from "./ui/SignupForm";
+import Hero from "../ui/Hero";
+import Emblem from "../ui/Emblem";
+import SignupForm from "../ui/SignupForm";
 
 const SignUp = () => {
   return (
