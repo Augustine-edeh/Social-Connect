@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./components/pages/Login";
+import SignUp from "./components/pages/SignUp";
 import Profile from "./components/pages/Profile";
 import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import LandingPage from "./components/pages/LandingPage";
 import HomePage from "./components/pages/HomePage";
-import Messages from "./components/pages/Messages";
 
 const App = () => {
   //Notification elements
@@ -54,7 +53,7 @@ const App = () => {
       <Route path="login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route
-        path="/Home"
+        path="/HomePage"
         element={<HomePage homePageElements={homePageElements} />}
       />
       <Route path="/profile" element={<Profile />} />
@@ -66,8 +65,6 @@ const App = () => {
         }
       />
       <Route path="/Settings" element={<Settings />} />
-      <Route path="/Messages" element={<Messages />} />
-
       <Route path="*" element={<p>Page Not Found (Error 404!)</p>} />
     </Routes>
   );
