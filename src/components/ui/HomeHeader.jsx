@@ -15,7 +15,8 @@ const HomeHeader = ({ homePageElements }) => {
         {/* Top bar */} {/* sticky top-0 z-50 */}
         <div className="flex flex-row shadow-md p-[15px] text-white justify-between bg-purple-700 ">
             {/* Greeting */}
-            <h2 onClick={() => navigateTo("/Settings")}>
+            <h2 className="cursor-pointer "
+                onClick={() => navigateTo("/Settings")}>
                 <b>{greeting}</b>
             </h2>
             {/* Application name */}

@@ -1,4 +1,5 @@
 import Footer from './Footer.jsx'
+import PagesHeader from "../ui/pagesHeader"
 import ImgHolder from "../../assets/images//lady.png";
 
 const Notifications = ({ notificationsElements }) => {
@@ -13,8 +14,8 @@ const Notifications = ({ notificationsElements }) => {
 
   return (
     <div>
-      <div className="mx-[8px] "/* id="NotificationsDiv" */>
-          <h1>Notifications</h1>{/* header tags not working? */}
+      <div /* id="NotificationsDiv" */>
+          <PagesHeader pagename="Notifications" />
 
           <h4 className="mt-[25px] mb-[8px]">Recent Activity</h4>
           <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[10px] shadow-md mb-2">

@@ -41,11 +41,6 @@ const Settings = () => {
         {/* Help and Support */}
         <SettingsOption title="Help and Support" 
         className="border-none "onClick={() => navigateTo("/")} />
-
-        {/* <p className="py-[20px] pl-[21px] cursor-pointer "
-          onClick={() => navigateTo("/")}>
-            <b>Help and support</b>
-        </p> */}
       </div>
 
       {/* Sign Out */}
