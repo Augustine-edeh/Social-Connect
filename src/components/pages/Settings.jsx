@@ -1,58 +1,60 @@
-import Footer from './Footer.jsx'
-import ImgHolder from "../../assets/images/lady.png";
-import { /* Link, */ useNavigate } from "react-router-dom"
+import Footer from './Footer'
+import SettingsOption from "../ui/SettingsOption"
+import PagesHeader from "../ui/pagesHeader"
+import SignOutBtn from "../ui/SignOutBtn"
+import EditProfile from "../ui/EditProfile"
+import { useNavigate } from "react-router-dom" // Importing the useNavigate hook for navigation
+
+/*
+ * The Settings component represents a settings page UI.
+ * It allows users to manage their profile information, language preferences,
+ * notification settings, account settings, help and support, and sign out.
+ */
 
 const Settings = () => {
-     const navigateTo = useNavigate();
- 
-      return (
-        <div>
-            <h1 className="pl-[10px]" /* settingsHeader */>Settings</h1>
-            <div className="shadow-md rounded-[21px] m-[10px] pl-[15px] py-[13px] " /* id="set1" */>
-              <img className="h-[50px] w-[50px] mr-[15px] rounded-full float-left"
-              src={ImgHolder} 
-              alt='Profile Picture' /* id="profilePic" */ />
-              <p onClick={() => navigateTo("/profile")}
-                 className="m-0 cursor-pointer ">Edit Profile Information</p>
-              {/* <a href="#"
-                  onClick={}> arrow
-                  </a>
-               */}
-            </div>
+  const navigateTo = useNavigate(); // Hook for navigation
 
-            <div className="shadow-md rounded-[21px] m-[10px] pt-[5px]"/* id="set2"*/>
-              <p className="py-[20px] pl-[21px] border-b-2 "/* id="set2P1" */>
-                <a href="#"
-                  /* onClick={} */>
-                  <b>Language preferences</b>
-                </a></p>
-              <p className="py-[20px] pl-[21px] border-b-2 ">
-                <a href="#" /* onClick={} */>
-                  <b>Notification Settings {/* arrow */}</b>
-                </a>
-              </p>
-              <p className="py-[20px] pl-[21px] border-b-2 ">
-                <a href="#" /* onClick={} */>
-                  <b>Account Settings {/* arrow */}</b>
-                </a>
-              </p>
-              <p className="py-[20px] pl-[21px] "/* id="set2P2" */>
-                <a href="#" /* onClick={} */>
-                  <b>Help and support {/* arrow */}</b>
-                </a>
-              </p>
-            </div>
+  return (
+    <div>
+      <PagesHeader pagename="Settings" />
 
-            <div>
-              <p className="shadow-md m-[10px] py-[15px] mb-[43px] rounded-[21px] cursor-pointer text-center " /* id="set3" */>
-                <a href="#" /* onClick={} */>
-                  <b>Sign Out</b>
-                </a>
-              </p>
-            </div>
-            <Footer />
-        </div>
-      )
-    }
-  
-export default Settings
+      {/* Profile Information. to include full name, username, location, bio, personal link, birthday,add picture */}
+      <div>
+        <EditProfile onClick={() => navigateTo("/")} />
+      </div>
+
+      {/* Settings Sections */}
+      <div className="shadow-md rounded-[21px] m-[10px] pt-[2px] ">
+        {/* Account settings. this includes account info like number, email, password, deactivate account, country*/}
+        <SettingsOption title="Account Settings" onClick={() => navigateTo("/")} />
+
+        {/* Privacy and safety. this includes who can see your post, manage content you see
+        who can message, block and mute, who can tag you, account verification, */}
+        <SettingsOption title="Privacy and Safety" onClick={() => navigateTo("/")} />
+
+        {/* Display and Acessibility. includes themes, sound, etc options while using screen reader */}
+        <SettingsOption title="Display and Accessibility" onClick={() => navigateTo("/")} />
+
+        {/* Notification Settings */}
+        <SettingsOption title="Notification Settings" onClick={() => navigateTo("/")} />
+       
+        {/* Help and Support */}
+        <SettingsOption title="Help and Support" 
+        className="border-none "onClick={() => navigateTo("/")} />
+
+        {/* <p className="py-[20px] pl-[21px] cursor-pointer "
+          onClick={() => navigateTo("/")}>
+            <b>Help and support</b>
+        </p> */}
+      </div>
+
+      {/* Sign Out */}
+        <SignOutBtn onClick={() => navigateTo("/Login")} />
+
+      {/* Footer Component */}
+      <Footer />
+    </div>
+  )
+}
+
+export default Settings // Exporting the Settings component

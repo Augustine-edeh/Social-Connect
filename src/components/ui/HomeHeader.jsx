@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { BellIcon } from '@heroicons/react/24/outline'
 
-const TopBar = ({ homePageElements }) => {
+const HomeHeader = ({ homePageElements }) => {
     const {
         greeting,
         appName,
@@ -12,8 +12,8 @@ const TopBar = ({ homePageElements }) => {
 
   return (
     <div>
-        {/* Top bar */}
-        <div className="flex flex-row shadow-md p-[15px] text-white  justify-between bg-purple-700">
+        {/* Top bar */} {/* sticky top-0 z-50 */}
+        <div className="flex flex-row shadow-md p-[15px] text-white justify-between bg-purple-700 ">
             {/* Greeting */}
             <h2 onClick={() => navigateTo("/Settings")}>
                 <b>{greeting}</b>
@@ -28,4 +28,4 @@ const TopBar = ({ homePageElements }) => {
   )
 }
 
-export default TopBar
+export default HomeHeader

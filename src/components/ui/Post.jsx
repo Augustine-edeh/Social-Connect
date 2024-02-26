@@ -19,7 +19,7 @@ const Post = ({ homePageElements }) => {
   const navigateTo = useNavigate();
 
 /*   to sort image, twitter inspect or flex the image and text and icons
- make header fixed and homepage responsive, move on to next. fix image height issue also*/
+ make header fixed and homepage responsive, fix image height issue also*/
   return (
     <div>
         {/* Post container */}
