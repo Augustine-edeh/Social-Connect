@@ -1,11 +1,8 @@
 import * as Icons from "@heroicons/react/24/outline";
-import MessageList from "../ui/messages/message list/MessagesList";
-import { useNavigate } from "react-router";
-
+import MessageList from "../ui/message list/MessageList";
 const Messages = () => {
-  const navigateTo = useNavigate();
   const messages = [
-    // Mock messages-data here
+    // Mock messages data here
     {
       id: 1,
       sender: {
@@ -197,12 +194,8 @@ const Messages = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="relative bg-white shadow p-4">
-        <Icons.ChevronLeftIcon
-          className="h-8 absolute cursor-pointer"
-          onClick={() => navigateTo("/HomePage")}
-        />
-        <h1 className="text-2xl font-semibold text-center">Messages</h1>
+      <header className="bg-white shadow p-4">
+        <h1 className="text-2xl font-semibold text-center">Chat App</h1>
       </header>
       <main>
         <MessageList messages={messages} />
