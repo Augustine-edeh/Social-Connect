@@ -6,6 +6,7 @@ import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import LandingPage from "./components/pages/LandingPage";
 import HomePage from "./components/pages/HomePage";
+import Messages from "./components/pages/Messages";
 
 const App = () => {
   //Notification elements
@@ -57,6 +58,7 @@ const App = () => {
         element={<HomePage homePageElements={homePageElements} />}
       />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/messages" element={<Messages />} />
       <Route path="/LandingPage" element={<LandingPage />} />
       <Route
         path="/Notifications"
