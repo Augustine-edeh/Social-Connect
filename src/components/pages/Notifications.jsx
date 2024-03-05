@@ -1,6 +1,7 @@
-import Footer from './Footer.jsx'
+import Footer from '../ui/Footer'
+import NotifUI from '../ui/NotifUI'
 import PagesHeader from "../ui/pagesHeader"
-import ImgHolder from "../../assets/images//lady.png";
+import ImgHolder from "../../assets/images/lady.png";
 
 const Notifications = ({ notificationsElements }) => {
   const {
@@ -9,7 +10,6 @@ const Notifications = ({ notificationsElements }) => {
     share, 
     follow, 
     post, 
-    followBtn,
   } = notificationsElements;
 
   return (
@@ -18,88 +18,30 @@ const Notifications = ({ notificationsElements }) => {
           <PagesHeader pagename="Notifications" />
 
           <h4 className="mt-[25px] mb-[8px]">Recent Activity</h4>
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[10px] shadow-md mb-2">
-            <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture' /* id="notifPic" *//>
-            <p className="flex-1"/* id="np1" */>{like}</p>
-          </div>
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[10px] shadow-md mb-2">
-            <img className="h-[35px] w-[38px] rounded-full"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <div className="flex flex-row">
-              {/* find a way to loop these elements in the div from app.jsx, 
-              just like you did with hexacolor and numgenerator*/}
-              <p className="flex-1 mr-[10px] ">{follow}</p>
-              <p className="bg-purple-700 text-white px-[10px] py-[1px] cursor-pointer rounded-[20px]">
-                {followBtn}</p>
-            </div>
-          </div> 
+          <NotifUI actiondone={like} useraction="View Likes"/>
+          <NotifUI actiondone={follow} useraction="Follow Back"/>
+          <NotifUI actiondone={like} useraction="View Likes"/>
+          <NotifUI actiondone={share} useraction="View Post"/>
 
           <h4 className="mt-[25px] mb-[8px]">Earlier</h4>
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-            <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <p className="flex-1 mr-2">{comment}</p>
-          </div>            
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-            <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>          
-            <p className="flex-1 mr-2">{post}</p>
-          </div>            
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-            <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <p className="flex-1 mr-2">{like}</p>
-          </div>    
-
+          <NotifUI actiondone={post} useraction="View Post"/>
+          <NotifUI actiondone={like} useraction="View Likes"/>
+          <NotifUI actiondone={comment} useraction="View Comments"/>
+          <NotifUI actiondone={post} useraction="View Post"/>
+          <NotifUI actiondone={comment} useraction="View Comment"/>
+          
           <h4 className="mt-[25px] mb-[8px]">Older</h4>
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[10px] shadow-md mb-2">
-            <img className="h-[35px] w-[38px] rounded-full"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <div className="flex flex-row">
-              {/* find a way to loop these elements in the div from app.jsx, 
-              just like you did with hexacolor and numgenerator*/}
-              <p className="flex-1 mr-[10px] ">{follow}</p>
-              <p className="bg-purple-700 text-white px-[10px] py-[1px] cursor-pointer rounded-[20px]">
-                {followBtn}</p>
-            </div>
-          </div>          
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-          <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <p className="flex-1 mr-2">{comment}</p>
-          </div>            
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-          <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <p className="flex-1 mr-2">{post}</p>
-          </div>            
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[10px] shadow-md mb-2">
-            <img className="h-[35px] w-[38px] rounded-full"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <div className="flex flex-row">
-              {/* find a way to loop these elements in the div from app.jsx, 
-              just like you did with hexacolor and numgenerator*/}
-              <p className="flex-1 mr-[10px] ">{follow}</p>
-              <p className="bg-purple-700 text-white px-[10px] py-[1px] cursor-pointer rounded-[20px]">
-                {followBtn}</p>
-            </div>
-          </div>    
-          <div className="flex items-center justify-between rounded-[20px] p-[6px] pl-[20px] shadow-md mb-2">
-          <img className="h-9 w-9 rounded-full order-last"
-            src={ImgHolder} 
-            alt='Profile Picture'/>
-            <p className="flex-1 mr-2">{share}</p>
-          </div>    
+          <NotifUI actiondone={follow} useraction="Follow Back "/>
+          <NotifUI actiondone={comment} useraction="View Comment"/>
+          <NotifUI actiondone={post} useraction="View Post"/>
+          <NotifUI actiondone={like} useraction="View Likes"/>
+          <NotifUI actiondone={share} useraction="View Post"/>
+          <NotifUI actiondone={comment} useraction="View Comment"/>
+          <NotifUI actiondone={post} useraction="View Post"/>
+          <NotifUI actiondone={follow} useraction="Follow Back "/>
+          <NotifUI actiondone={comment} useraction="ViewComment "/>
+          <NotifUI actiondone={like} useraction="View Likes"/>
+          <NotifUI actiondone={share} useraction="View Post"/> 
       </div>
       <Footer />
     </div>  
