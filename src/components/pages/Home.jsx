@@ -1,5 +1,5 @@
 import HomeHeader from "../ui/HomeHeader"
-import Post from './../ui/Post'
+import Post from '../ui/Post'
 
 /* if there's notification, icon/color changes
  images upload should be grid for multiple pics*/

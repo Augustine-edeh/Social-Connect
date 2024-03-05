@@ -1,4 +1,4 @@
-import Footer from './Footer'
+import Footer from '../ui/Footer.jsx'
 import SettingsOption from "../ui/SettingsOption"
 import PagesHeader from "../ui/pagesHeader"
 import SignOutBtn from "../ui/SignOutBtn"

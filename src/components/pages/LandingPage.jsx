@@ -1,5 +1,5 @@
 import ImgHolder from "../../assets/images/couple.png"
-import Footer from './Footer.jsx'
+import Footer from '../ui/Footer.jsx'
 
 const LandingPage = () => {
     return (
