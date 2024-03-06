@@ -26,7 +26,7 @@ const Messages = () => {
       <header className="relative bg-white shadow p-4">
         <Icons.ChevronLeftIcon
           className="h-8 absolute cursor-pointer"
-          onClick={() => navigateTo("/HomePage")}
+          onClick={() => navigateTo("/Home")}
         />
         <h1 className="text-2xl font-semibold text-center">Messages</h1>
       </header>
