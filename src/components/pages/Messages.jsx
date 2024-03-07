@@ -1,5 +1,5 @@
 import * as Icons from "@heroicons/react/24/outline";
-import MessageList from "../ui/messages/message list/MessagesList";
+import ChatList from "../ui/messages/ChatList";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 
@@ -31,7 +31,7 @@ const Messages = () => {
         <h1 className="text-2xl font-semibold text-center">Messages</h1>
       </header>
       <main>
-        <MessageList chats={chats} />
+        <ChatList chats={chats} />
       </main>
     </div>
   );
