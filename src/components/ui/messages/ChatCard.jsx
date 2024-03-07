@@ -6,7 +6,9 @@ const ChatCard = ({ chat }) => {
   return (
     <li
       className="message-item mb-4 p-4 border border-gray-300 rounded-lg"
-      onClick={() => navigateTo("/chat")}
+      onClick={() => {
+        navigateTo("/chat"), (state = { chat });
+      }}
     >
       <img
         src={chat.sender.avatar}
