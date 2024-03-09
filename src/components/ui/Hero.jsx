@@ -1,7 +1,6 @@
 const Hero = () => {
   return (
     <section className="bg-[#82182C] text-white hidden lg:grid lg:w-1/2 place-content-center">
-      <img src="" alt="vector-img" />
 
       <p className="text-center font-extrabold text-3xl">
         SocialConnect brings
