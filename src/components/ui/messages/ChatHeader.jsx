@@ -3,7 +3,7 @@ import senderImg from "../../../assets/images/Profile_IMG.jpg";
 
 const ChatHeader = () => {
   return (
-    <header className="flex justify-between items-center bg-purple-600 shadow py-4 px-3 text-white">
+    <header className="flex justify-between items-center bg-purple-600 shadow py-4 px-3 text-white h-20">
       <div className="flex items-center gap-4">
         <Icons.ChevronLeftIcon className="h-8 cursor-pointer" />
         <div className="flex items-center gap-2">
