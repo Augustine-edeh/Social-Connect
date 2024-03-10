@@ -1,0 +1,41 @@
+{
+  "conversation_id": "123456789",
+  "participants": [
+    {
+      "user_id": "user_1",
+      "username": "john_doe",
+      "avatar": "https://example.com/avatar/john_doe.jpg"
+    },
+    {
+      "user_id": "user_2",
+      "username": "jane_smith",
+      "avatar": "https://example.com/avatar/jane_smith.jpg"
+    }
+  ],
+  "messages": [
+    {
+      "message_id": "msg_1",
+      "sender_id": "user_1",
+      "timestamp": "2024-03-10T08:00:00",
+      "content": "Hey Jane! How are you doing today?"
+    },
+    {
+      "message_id": "msg_2",
+      "sender_id": "user_2",
+      "timestamp": "2024-03-10T08:05:00",
+      "content": "Hi John! I'm good, thanks for asking. How about you?"
+    },
+    {
+      "message_id": "msg_3",
+      "sender_id": "user_1",
+      "timestamp": "2024-03-10T08:10:00",
+      "content": "I'm doing great! Just working on some projects. What about you?"
+    },
+    {
+      "message_id": "msg_4",
+      "sender_id": "user_2",
+      "timestamp": "2024-03-10T08:15:00",
+      "content": "That sounds interesting! I'm just relaxing today."
+    }
+  ]
+}
