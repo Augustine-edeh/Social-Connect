@@ -18,7 +18,7 @@ const MessageThread = () => {
     },
   ];
   return (
-    <div className="p-3 bg-red-600 h-[calc(100dvh-10.5rem)]">
+    <div className="p-3 bg-red-600 h-[calc(100dvh-10.5rem)] overflow-y-scroll  no-scrollbar">
       {messagesList.map(({ message, id }) => (
         <MessageBubble message={message} key={id} />
       ))}
