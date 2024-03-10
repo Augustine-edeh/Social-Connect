@@ -1,28 +1,121 @@
+import { useEffect, useState } from "react";
 import MessageBubble from "./MessageBubble";
 
 const MessageThread = () => {
-  const messagesList = [
-    {
-      message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis accusamus error autem numquam praesentium est voluptate maiores eaque! Quasi officia cum aspernatur dicta dolorum error eius voluptates aperiam aliquam. lorem ipsum dolor sit amet, consectetur adip incididunt",
-      id: 1,
-    },
+  const [conversation, setConversation] = useState(null);
 
-    {
-      message: "Heyy!",
-      id: 2,
-    },
-    {
-      message: "Hello bro",
-      id: 3,
-    },
-  ];
+  useEffect(() => {
+    // Function to fetch conversation data
+    const fetchConversationData = async () => {
+      try {
+        // Simulate fetching data from a JSON file stored locally
+        const response = await fetch(
+          "../../../../public/store/messagesList.json"
+        );
+        const data = await response.json();
+        setConversation(data);
+      } catch (error) {
+        console.error("Error fetching conversation data:", error);
+      }
+    };
+
+    // Fetch conversation data initially
+    fetchConversationData();
+  }, []);
+
+  // Function to update conversation data
+  const updateConversation = async (updatedConversationData) => {
+    try {
+      // Simulate making a POST request to update the JSON file
+      await fetch("/store/updateConversation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedConversationData),
+      });
+
+      // Update conversation state after successful update
+      setConversation(updatedConversationData);
+    } catch (error) {
+      console.error("Error updating conversation data:", error);
+    }
+  };
+
+  //   const messagesList = [
+  //     {
+  //       message:
+  //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis accusamus error autem numquam praesentium est voluptate maiores eaque! Quasi officia cum aspernatur dicta dolorum error eius voluptates aperiam aliquam. lorem ipsum dolor sit amet, consectetur adip incididunt",
+  //       id: 1,
+  //     },
+
+  //     {
+  //       message: "Heyy!",
+  //       id: 2,
+  //     },
+  //     {
+  //       message: "Hello bro",
+  //       id: 3,
+  //     },
+  //   ];
+
+  const addNewMessageHandler = () => {
+    // Example of updating conversation data
+    const updatedConversationData = { ...conversation };
+    updatedConversationData.messages.push({
+      message_id: "msg_5",
+      sender_id: "user_1",
+      timestamp: new Date().toISOString(),
+      content: "This is a new message!",
+    });
+    updateConversation(updatedConversationData);
+  };
+
   return (
     <div className="p-3 bg-red-600 h-[calc(100dvh-10.5rem)] overflow-y-scroll  no-scrollbar">
-      {messagesList.map(({ message, id }) => (
-        <MessageBubble message={message} key={id} />
-      ))}
+      {conversation ? (
+        <ul>
+          {conversation.messages.map((message) => (
+            <MessageBubble message={message.content} key={message.message_id} />
+          ))}
+        </ul>
+      ) : (
+        <p>Loading messages in this conversation...</p>
+      )}
+
+      <button onClick={addNewMessageHandler}>Add Message</button>
     </div>
+
+    // <div>
+    //   <h1>Conversation</h1>
+    //   {conversation ? (
+    //     <ul>
+    //       {conversation.messages.map((message) => (
+    //         <li key={message.message_id}>
+    //           <strong>{message.sender_id}: </strong>
+    //           {message.content}
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   ) : (
+    //     <p>Loading messages in this conversation...</p>
+    //   )}
+    //   <button
+    //     onClick={() => {
+    //       // Example of updating conversation data
+    //       const updatedConversationData = { ...conversation };
+    //       updatedConversationData.messages.push({
+    //         message_id: "msg_5",
+    //         sender_id: "user_1",
+    //         timestamp: new Date().toISOString(),
+    //         content: "This is a new message!",
+    //       });
+    //       updateConversation(updatedConversationData);
+    //     }}
+    //   >
+    //     Add Message
+    //   </button>
+    // </div>
   );
 };
 
