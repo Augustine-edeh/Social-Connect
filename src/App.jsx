@@ -46,7 +46,6 @@ const App = () => {
       "Navigating the beautiful journey of marriage with my best friend and partner-in-crime! 💑 From silly arguments to heartfelt conversations, every moment strengthens our bond. #InfluenceWithLove",
     commentCount: `20` /* if condtion for icon when user likes or comment */,
     likeCount: `328`,
-    optionsIcon: "..." /* added for ui */,
   };
 
   return (

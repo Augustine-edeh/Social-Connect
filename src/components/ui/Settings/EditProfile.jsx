@@ -1,7 +1,11 @@
-import ImgHolder from "../../assets/images/lady.png"
+import ImgHolder from "../../../assets/images/lady.png"
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
+import { useNavigate } from "react-router-dom"
 
 const EditProfile = ({ onClick }) => {
+  // Hook for navigation within the application
+  const navigateTo = useNavigate();
+
     return (
       <div className="flex shadow-md rounded-[21px] m-[10px] pl-[15px] py-[6px]">
         <img

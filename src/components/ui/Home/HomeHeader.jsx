@@ -20,7 +20,10 @@ const HomeHeader = ({ homePageElements }) => {
                 <b>{greeting}</b>
             </h2>
             {/* Application name */}
-            <h2><b>{appName}</b></h2>
+            <h2 className="cursor-pointer"
+                onClick={() => navigateTo("/LandingPage")}>
+                <b>{appName}</b>
+            </h2>
             {/* Notification bell icon */}
             <BellIcon className="h-6 w-6 cursor-pointer"
                 onClick={() => navigateTo("/Notifications")} />

@@ -1,7 +1,6 @@
 import Footer from '../ui/Footer'
 import NotifUI from '../ui/NotifUI'
 import PagesHeader from "../ui/pagesHeader"
-import ImgHolder from "../../assets/images/lady.png";
 
 const Notifications = ({ notificationsElements }) => {
   const {

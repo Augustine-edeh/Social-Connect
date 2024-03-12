@@ -1,10 +1,15 @@
 import ImgHolder from "../../assets/images/couple.png"
 import Footer from '../ui/Footer.jsx'
+import { useNavigate } from "react-router-dom" 
 
 const LandingPage = () => {
+  const navigateTo = useNavigate(); // Hook for navigation
+
     return (
       <div className="bg-gray-100 ">
-        <h3 className="shadow-md p-[20px] mb-[30px] bg-purple-600 text-white " >Welcome to SocialConnect</h3> {/* home icon */}
+        <h3 className="shadow-md p-[20px] mb-[30px] bg-purple-600 text-white " >
+          Welcome to SocialConnect
+        </h3> 
         <div className="mx-[20px] " >
           <h1 className="mb-[30px] ">Discover and Share</h1>
           <p className="mb-[20px] ">Explore posts from users around the world</p>
@@ -12,15 +17,13 @@ const LandingPage = () => {
             src={ImgHolder} 
             alt='Profile Picture'/>
           <p className="text-center mb-[10px] ">Connect with friends and family</p>
-          <p className="shadow-md mb-[10px] py-[5px] rounded-[35px] cursor-pointer text-center bg-purple-700 text-white">
-            <a href="#"
-            /* onClick={} */>
-              Sign Up</a>
+          <p onClick={() => navigateTo("/SignUp")}
+            className="shadow-md mb-[10px] py-[5px] rounded-[35px] cursor-pointer text-center bg-purple-700 text-white">
+            Sign Up
           </p>
-          <p className="shadow-md mb-[10px] py-[5px] rounded-[35px] cursor-pointer text-center ">
-          <a href="#"
-            /* onClick={} */>
-              Log In</a>
+          <p onClick={() => navigateTo("/Login")}
+            className="shadow-md mb-[10px] py-[5px] rounded-[35px] cursor-pointer text-center ">
+          Log In
           </p>    
 
           <div>

@@ -1,5 +1,5 @@
-import HomeHeader from "../ui/HomeHeader";
-import Post from "./../ui/Post";
+import HomeHeader from "../ui/Home/HomeHeader";
+import Post from "./../ui/Home/Post";
 import Navbar from "../ui/navigation/Navbar";
  
 /* if there's notification, icon/color changes

@@ -1,9 +1,9 @@
 import Footer from '../ui/Footer.jsx'
-import SettingsOption from "../ui/SettingsOption"
+import SettingsOption from "../ui/Settings/SettingsOption"
 import PagesHeader from "../ui/pagesHeader"
-import SignOutBtn from "../ui/SignOutBtn"
-import EditProfile from "../ui/EditProfile"
-import { useNavigate } from "react-router-dom" // Importing the useNavigate hook for navigation
+import SignOutBtn from "../ui/Settings/SignOutBtn"
+import EditProfile from "../ui/Settings/EditProfile"
+import { useNavigate } from "react-router-dom" 
 
 /*
  * The Settings component represents a settings page UI.
@@ -40,7 +40,7 @@ const Settings = () => {
        
         {/* Help and Support */}
         <SettingsOption title="Help and Support" 
-        className="border-none "onClick={() => navigateTo("/")} />
+        className="border-none "onClick={() => navigateTo("/LandingPage")} />
       </div>
 
       {/* Sign Out */}
