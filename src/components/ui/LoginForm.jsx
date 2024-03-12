@@ -23,7 +23,10 @@ const LoginForm = () => {
         />
         <button
           className="bg-white text-black p-3 rounded-3xl font-extrabold text-lg"
-          onClick={() => navigateTo("/Home")}
+          onClick={(e) => {
+            e.preventDefault();
+            navigateTo("/Home");
+          }}
         >
           Log In
         </button>
