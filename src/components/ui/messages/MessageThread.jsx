@@ -9,8 +9,11 @@ const MessageThread = () => {
     const fetchConversationData = async () => {
       try {
         // Simulate fetching data from a JSON file stored locally
+        // const response = await fetch(
+        //   "../../../../public/store/messagesList.json"
+        // );
         const response = await fetch(
-          "../../../../public/store/messagesList.json"
+          " https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/messages"
         );
         const data = await response.json();
         setConversation(data);
@@ -41,23 +44,6 @@ const MessageThread = () => {
       console.error("Error updating conversation data:", error);
     }
   };
-
-  //   const messagesList = [
-  //     {
-  //       message:
-  //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis accusamus error autem numquam praesentium est voluptate maiores eaque! Quasi officia cum aspernatur dicta dolorum error eius voluptates aperiam aliquam. lorem ipsum dolor sit amet, consectetur adip incididunt",
-  //       id: 1,
-  //     },
-
-  //     {
-  //       message: "Heyy!",
-  //       id: 2,
-  //     },
-  //     {
-  //       message: "Hello bro",
-  //       id: 3,
-  //     },
-  //   ];
 
   const addNewMessageHandler = () => {
     // Example of updating conversation data

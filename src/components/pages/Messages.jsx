@@ -10,9 +10,14 @@ const Messages = () => {
   useEffect(() => {
     const fetchChats = async () => {
       try {
-        const response = await fetch("../../../public/store/chatData.json");
+        // const response = await fetch("../../../public/store/chatData.json");
+        const response = await fetch(
+          "https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/chats"
+        );
         const data = await response.json();
         setChats(data.messages);
+        console.log(data);
+        // console.log(chats);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -23,6 +28,7 @@ const Messages = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
+      {console.log(chats)}
       <header className="relative bg-white shadow p-4">
         <Icons.ChevronLeftIcon
           className="h-8 absolute cursor-pointer"
