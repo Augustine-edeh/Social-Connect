@@ -42,23 +42,6 @@ const MessageThread = () => {
     }
   };
 
-  //   const messagesList = [
-  //     {
-  //       message:
-  //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis accusamus error autem numquam praesentium est voluptate maiores eaque! Quasi officia cum aspernatur dicta dolorum error eius voluptates aperiam aliquam. lorem ipsum dolor sit amet, consectetur adip incididunt",
-  //       id: 1,
-  //     },
-
-  //     {
-  //       message: "Heyy!",
-  //       id: 2,
-  //     },
-  //     {
-  //       message: "Hello bro",
-  //       id: 3,
-  //     },
-  //   ];
-
   const addNewMessageHandler = () => {
     // Example of updating conversation data
     const updatedConversationData = { ...conversation };
