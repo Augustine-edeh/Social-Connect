@@ -10,7 +10,10 @@ const Messages = () => {
   useEffect(() => {
     const fetchChats = async () => {
       try {
-        const response = await fetch("../../../public/store/chatData.json");
+        // const response = await fetch("../../../public/store/chatData.json");
+        const response = await fetch(
+          "https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/chats"
+        );
         const data = await response.json();
         setChats(data.messages);
         console.log(data);

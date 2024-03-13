@@ -1,7 +1,7 @@
 import HomeHeader from "../ui/HomeHeader";
 import Post from "./../ui/Post";
 import Navbar from "../ui/navigation/Navbar";
- 
+
 /* if there's notification, icon/color changes
  images upload should be grid for multiple pics*/
 const HomePage = ({ homePageElements }) => {

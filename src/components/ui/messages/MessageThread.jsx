@@ -9,8 +9,11 @@ const MessageThread = () => {
     const fetchConversationData = async () => {
       try {
         // Simulate fetching data from a JSON file stored locally
+        // const response = await fetch(
+        //   "../../../../public/store/messagesList.json"
+        // );
         const response = await fetch(
-          "../../../../public/store/messagesList.json"
+          " https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/messages"
         );
         const data = await response.json();
         setConversation(data);
