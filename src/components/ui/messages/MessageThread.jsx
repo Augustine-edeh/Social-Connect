@@ -8,10 +8,6 @@ const MessageThread = () => {
     // Function to fetch conversation data
     const fetchConversationData = async () => {
       try {
-        // Simulate fetching data from a JSON file stored locally
-        // const response = await fetch(
-        //   "../../../../public/store/messagesList.json"
-        // );
         const response = await fetch(
           " https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/messages"
         );
@@ -46,7 +42,7 @@ const MessageThread = () => {
   };
 
   const addNewMessageHandler = () => {
-    // Example of updating conversation data
+    // Code for updating conversation data
     const updatedConversationData = { ...conversation };
     updatedConversationData.messages.push({
       message_id: "msg_5",
@@ -71,37 +67,6 @@ const MessageThread = () => {
 
       <button onClick={addNewMessageHandler}>Add Message</button>
     </div>
-
-    // <div>
-    //   <h1>Conversation</h1>
-    //   {conversation ? (
-    //     <ul>
-    //       {conversation.messages.map((message) => (
-    //         <li key={message.message_id}>
-    //           <strong>{message.sender_id}: </strong>
-    //           {message.content}
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   ) : (
-    //     <p>Loading messages in this conversation...</p>
-    //   )}
-    //   <button
-    //     onClick={() => {
-    //       // Example of updating conversation data
-    //       const updatedConversationData = { ...conversation };
-    //       updatedConversationData.messages.push({
-    //         message_id: "msg_5",
-    //         sender_id: "user_1",
-    //         timestamp: new Date().toISOString(),
-    //         content: "This is a new message!",
-    //       });
-    //       updateConversation(updatedConversationData);
-    //     }}
-    //   >
-    //     Add Message
-    //   </button>
-    // </div>
   );
 };
 
