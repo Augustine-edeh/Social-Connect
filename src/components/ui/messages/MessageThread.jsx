@@ -54,7 +54,7 @@ const MessageThread = () => {
   };
 
   return (
-    <div className="p-3 bg-red-600 h-[calc(100dvh-10.5rem)] overflow-y-scroll  no-scrollbar">
+    <div className="p-3 bg-pink-600 h-[calc(100dvh-10.5rem)] overflow-y-scroll  no-scrollbar">
       {conversation ? (
         <ul>
           {conversation.messages.map((message) => (
