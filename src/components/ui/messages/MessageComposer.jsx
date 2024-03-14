@@ -8,7 +8,6 @@ const MessageComposer = () => {
   const messageInputRef = useRef();
   const submitHandler = (e) => {
     e.preventDefault();
-    // alert(messageInputRef.current.value);
     messageInputRef.current.value = "";
   };
 

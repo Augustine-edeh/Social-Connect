@@ -18,7 +18,7 @@ const ChatHeader = () => {
             alt="user"
             className="rounded-full h-12 lg:h-14"
           />
-          <h1 className="text-2xl font-semibold">Sender name</h1>
+          <h1 className="text-2xl font-semibold">Trevor Phillips</h1>
         </div>
       </div>
       <Icons.MagnifyingGlassIcon className="h-8" />
