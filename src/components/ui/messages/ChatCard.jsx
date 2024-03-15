@@ -7,7 +7,7 @@ const ChatCard = ({ chat }) => {
     <li
       className="message-item mb-4 p-4 border border-gray-300 rounded-lg"
       onClick={() => {
-        navigateTo("/chat"), (state = { chat });
+        navigateTo("/chat", { state: chat });
       }}
     >
       <img

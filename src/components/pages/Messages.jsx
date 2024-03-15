@@ -15,7 +15,6 @@ const Messages = () => {
         );
         const data = await response.json();
         setChats(data.messages);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -26,7 +25,7 @@ const Messages = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      {console.log(chats)}
+      {/* {console.log(chats)} */}
       <header className="relative bg-white shadow p-4">
         <Icons.ChevronLeftIcon
           className="h-8 absolute cursor-pointer"

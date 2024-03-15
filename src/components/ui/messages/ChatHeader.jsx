@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router";
 import * as Icons from "@heroicons/react/24/outline";
 import senderImg from "../../../assets/images/Profile_IMG.jpg";
 
-const ChatHeader = () => {
+const ChatHeader = ({ chatStateProps }) => {
   const navigateTo = useNavigate();
 
   return (
@@ -14,11 +15,13 @@ const ChatHeader = () => {
         />
         <div className="flex items-center gap-2">
           <img
-            src={senderImg}
+            src={chatStateProps.sender.avatar}
             alt="user"
             className="rounded-full h-12 lg:h-14"
           />
-          <h1 className="text-2xl font-semibold">Trevor Phillips</h1>
+          <h1 className="text-2xl font-semibold">
+            {chatStateProps.sender.name}
+          </h1>
         </div>
       </div>
       <Icons.MagnifyingGlassIcon className="h-8" />
