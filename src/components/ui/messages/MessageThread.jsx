@@ -58,7 +58,7 @@ const MessageThread = () => {
       {conversation ? (
         <ul>
           {conversation.messages.map((message) => (
-            <MessageBubble message={message.content} key={message.message_id} />
+            <MessageBubble message={message} key={message.message_id} />
           ))}
         </ul>
       ) : (
