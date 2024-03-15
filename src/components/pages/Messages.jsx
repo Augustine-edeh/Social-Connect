@@ -1,11 +1,14 @@
 import * as Icons from "@heroicons/react/24/outline";
 import ChatList from "../ui/messages/ChatList";
+LoadingMessageUI;
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
+import LoadingMessageUI from "../ui/messages/LoadingMessageUI";
 
 const Messages = () => {
   const navigateTo = useNavigate();
   const [chats, setChats] = useState();
+  const [isLoadingMessages, setIsLoadingMessages] = useState(true);
 
   useEffect(() => {
     const fetchChats = async () => {
@@ -15,7 +18,9 @@ const Messages = () => {
         );
         const data = await response.json();
         setChats(data.messages);
+        setIsLoadingMessages(false);
       } catch (error) {
+        setIsLoadingMessages(false);
         console.error("Error fetching data:", error);
       }
     };
@@ -25,7 +30,6 @@ const Messages = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      {/* {console.log(chats)} */}
       <header className="relative bg-white shadow p-4">
         <Icons.ChevronLeftIcon
           className="h-8 absolute cursor-pointer"
@@ -34,7 +38,7 @@ const Messages = () => {
         <h1 className="text-2xl font-semibold text-center">Messages</h1>
       </header>
       <main>
-        <ChatList chats={chats} />
+        {isLoadingMessages ? <LoadingMessageUI /> : <ChatList chats={chats} />}
       </main>
     </div>
   );
