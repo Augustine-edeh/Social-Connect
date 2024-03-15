@@ -1,12 +1,11 @@
 import ChatHeader from "./ChatHeader";
 import MessageThread from "./MessageThread";
-
 import ChatFooter from "./ChatFooter";
 
-const ChatWindow = () => {
+const ChatWindow = ({ chatStateProps }) => {
   return (
     <div className="relative">
-      <ChatHeader />
+      <ChatHeader chatStateProps={chatStateProps} />
       <MessageThread />
       <ChatFooter />
     </div>
