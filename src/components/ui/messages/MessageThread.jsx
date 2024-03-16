@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import * as Loader from "react-spinners";
+
 import MessageBubble from "./MessageBubble";
 
 const MessageThread = () => {
@@ -60,12 +62,29 @@ const MessageThread = () => {
           {conversation.messages.map((message) => (
             <MessageBubble message={message} key={message.message_id} />
           ))}
+          <button
+            onClick={addNewMessageHandler}
+            className="bg-blue-600 rounded text-white mt-5 p-2"
+          >
+            Add Message
+          </button>
         </ul>
       ) : (
-        <p>Loading messages in this conversation...</p>
+        <>
+          <Loader.BarLoader
+            className="mx-auto mt-72 mb-10"
+            color={"purple"}
+            loading={true}
+            // cssOverride={override}
+            size={40}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+          <p className="text-center">
+            Loading messages in this conversation...
+          </p>
+        </>
       )}
-
-      <button onClick={addNewMessageHandler}>Add Message</button>
     </div>
   );
 };
