@@ -11,7 +11,7 @@ const MessageThread = () => {
     const fetchConversationData = async () => {
       try {
         const response = await fetch(
-          " https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/messages"
+          "https://ee66bbc0-7649-4d1b-a2ef-d35f79f8ccdc.mock.pstmn.io/conversations"
         );
         const data = await response.json();
         setConversation(data);
@@ -47,7 +47,7 @@ const MessageThread = () => {
     // Code for updating conversation data
     const updatedConversationData = { ...conversation };
     updatedConversationData.messages.push({
-      message_id: "msg_5",
+      message_id: crypto.randomUUID(),
       sender_id: "user_1",
       timestamp: new Date().toISOString(),
       content: "This is a new message!",

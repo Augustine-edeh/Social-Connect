@@ -14,7 +14,7 @@ const Messages = () => {
     const fetchChats = async () => {
       try {
         const response = await fetch(
-          "https://a343ba36-711f-4774-bb2a-077cb59bd0f2.mock.pstmn.io/chats"
+          "https://ee66bbc0-7649-4d1b-a2ef-d35f79f8ccdc.mock.pstmn.io/chats"
         );
         const data = await response.json();
         setChats(data.messages);
