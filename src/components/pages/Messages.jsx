@@ -14,7 +14,7 @@ const Messages = () => {
     const fetchChats = async () => {
       try {
         const response = await fetch(
-          "https://ee66bbc0-7649-4d1b-a2ef-d35f79f8ccdc.mock.pstmn.io/chats"
+          "https://mock.apidog.com/m1/488914-0-default/messages"
         );
         const data = await response.json();
         setChats(data.messages);
