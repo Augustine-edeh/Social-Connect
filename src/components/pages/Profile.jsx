@@ -1,8 +1,14 @@
+import * as Icons from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router";
+import profileImg from "../../assets/images/Profile_IMG.jpg";
 const Profile = () => {
-  const profileImg = "../../assets/images/profile_img.png";
-
+  const navigateTo = useNavigate();
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <Icons.ChevronLeftIcon
+        className="h-8 w-fit absolute top-4 left-2 hover:bg-gray-500/70 rounded text-white"
+        onClick={() => navigateTo("/Home")}
+      />
       <section className="grid w-full overflow-clip bg-gray-400 place-content-center place-self-center">
         <img
           src={profileImg}
@@ -12,7 +18,7 @@ const Profile = () => {
       </section>
       <section className="bg-gray-200">
         <p className="bg-gray-100 text-2xl text-center font-bold mx-auto py-3 rounded-sm">
-          John Doe
+          Jack Walters
         </p>
 
         <div className="flex gap-0.5">
