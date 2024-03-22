@@ -1,8 +1,11 @@
+import { useLocation } from "react-router-dom";
 import * as Icons from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router";
-import profileImg from "../../assets/images/Profile_IMG.jpg";
-const Profile = () => {
+
+const UserProfile = () => {
   const navigateTo = useNavigate();
+  const { userName, userAvatar } = useLocation().state.stateData;
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <Icons.ChevronLeftIcon
@@ -11,14 +14,14 @@ const Profile = () => {
       />
       <section className="grid w-full overflow-clip bg-gray-400 place-content-center place-self-center">
         <img
-          src={profileImg}
+          src={userAvatar}
           className="h-60 w-60 bg-gray-100 rounded-full text-center"
           alt="profile-image"
         />
       </section>
       <section className="bg-gray-200">
         <p className="bg-gray-100 text-2xl text-center font-bold mx-auto py-3 rounded-sm">
-          Jack Walters
+          {userName}
         </p>
 
         <div className="flex gap-0.5">
@@ -39,5 +42,4 @@ const Profile = () => {
     </div>
   );
 };
-
-export default Profile;
+export default UserProfile;
