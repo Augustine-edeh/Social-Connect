@@ -8,6 +8,7 @@ import LandingPage from "./components/pages/LandingPage";
 import Home from "./components/pages/Home";
 import Messages from "./components/pages/Messages";
 import Chat from "./components/pages/Chat";
+import UserProfile from "./components/pages/UserProfile";
 
 const App = () => {
   //Notification elements
@@ -59,6 +60,7 @@ const App = () => {
         element={<Home homePageElements={homePageElements} />}
       />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/messages" element={<Messages />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/LandingPage" element={<LandingPage />} />
